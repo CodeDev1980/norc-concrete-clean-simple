@@ -40,6 +40,17 @@
         margin-top: 80px;
         margin-bottom: 30px;
     }
+    #nav2 {
+        display: none;
+    }
+    @media(max-width:768px){
+        #nav1 {
+            display:none;
+        }
+        #nav2 {
+            display: block;
+        }
+    }
 </style>
 <body>
 
@@ -48,11 +59,23 @@
     <div class="w3-bar w3-white w3-wide w3-padding w3-card">
         <a href="#home" class="w3-bar-item w3-button"><b>NORC</b> Concrete</a>
         <!-- Float links to the right. Hide them on small screens -->
-        <div class="w3-right w3-hide-small">
-            <a href="#projects" class="w3-bar-item w3-button">Projects</a>
-            <a href="#projects" class="w3-bar-item w3-button">Services</a>
-            <a href="#about" class="w3-bar-item w3-button">About</a>
-            <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+        <div id="nav2">
+            <div class="w3-dropdown-hover">
+                <button class="w3-button w3-black">MENU</button>
+                <div class="w3-dropdown-content w3-bar-block w3-border">
+                    <a href="#" class="w3-bar-item w3-button">Link 1</a>
+                    <a href="#" class="w3-bar-item w3-button">Link 2</a>
+                    <a href="#" class="w3-bar-item w3-button">Link 3</a>
+                </div>
+            </div>
+        </div>
+        <div class="w3-right">
+            <div id="nav1">
+                <a href="#projects" class="w3-bar-item w3-button">Projects</a>
+                <a href="#projects" class="w3-bar-item w3-button">Services</a>
+                <a href="#about" class="w3-bar-item w3-button">About</a>
+                <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+            </div>
         </div>
     </div>
 </div>
